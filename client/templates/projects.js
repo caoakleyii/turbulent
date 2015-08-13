@@ -1,6 +1,5 @@
 Template.projects.onRendered(function() {
     $('.project-app-frame').draggable();
-    $('.project-app').draggable();
     $('.project-app-frame').dblclick(function(){
       maximizeFrame();
     })

@@ -16,6 +16,16 @@ nav.side-navbar {
     height: 100%;
     color: white;
 
+    li.selected {
+      border-left: 1px solid orange;
+    }
+
+    .selected {
+       a {
+         color: orange;
+       }
+    }
+
     ul
     {
       margin: 15px;
@@ -28,6 +38,10 @@ nav.side-navbar {
         font-size: 15px;
         &:hover {
           border-left: 1px solid orange;
+
+          a {
+            color: orange;
+          }
         }
       }
     }
@@ -41,6 +55,19 @@ nav.side-navbar {
       font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
       font-size: 2rem;
     }
+
+    .social-media-profiles{
+      width: 50%;
+      position: fixed;
+      bottom: 25px;
+      left: 5px;
+      a {
+        padding: 0 5px;
+      }
+      img {
+        width: 32px;
+      }
+    }
   }
 
   @media (max-width: 991px){
@@ -52,7 +79,7 @@ nav.side-navbar {
     a {
       color: orange;
       &:hover {
-        color: #cac2c0;
+        color: white;
       }
     }
     ul
@@ -67,12 +94,32 @@ nav.side-navbar {
       }
     }
 
+    .selected {
+       a {
+         color: white;
+       }
+    }
+
     .logo {
       display: inline;
       font-weight: 700;
       padding: 0px 15px;
+    }
 
-
+    .social-media-profiles {
+      bottom: 0px;
+      position: fixed;
+      text-align: center;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(0,0,0,0.6);
+      padding: 5px 0;
+      a {
+        padding: 0 5px;
+      }
+      img {
+        width: 24px;
+      }
     }
   }
 }
