@@ -1,9 +1,9 @@
 Template.project.onRendered(function() {
   $('.project').draggable();
 
-  $('.about-this-project').popover({
-    html : true
-  });
+  // $('.about-this-project').popover({
+  //   html : true
+  // });
 });
 
 Template.project.events({
@@ -11,7 +11,7 @@ Template.project.events({
     $('.project-app').attr('src', this.appUrl);
     $('.project-app-frame').show();
 
-    $('.about-this-project').attr('data-content', this.description);
+    // $('.about-this-project').attr('data-content', this.description);
   }
 });
 
