@@ -1,0 +1,76 @@
+.projects-collection {
+ display:inline-block;
+  @media (min-width: 992px ) {
+    margin: 25px 190px;
+  }
+  @media (max-width: 991px ){
+    margin: 15px 5px;
+  }
+}
+
+.project-app-frame {
+  background-color: rgba(235,235,235,0.8);
+  position: fixed;
+  display: none;
+  @media (min-width: 992px) {
+    width: 90%;
+    min-height: 90%;
+    top: 7%;
+    left: 7%;
+  }
+  @media (max-width: 991px){
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.project-app {
+
+  position: fixed;
+  border: none;
+  display: block;
+
+  @media (min-width: 992px) {
+    min-height: 90%;
+    width: 90%;
+  }
+  @media (max-width: 991px){
+    height: 100%;
+    width: 100%
+  }
+}
+.maximize-frame {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.maximize-app {
+  width: 100%;
+  height: 100%;
+}
+.navigation-icons {
+  padding-left: 10px;
+  a {
+     &:hover {
+       color: white;
+       text-decoration: none;
+     }
+  }
+}
+.window-icons
+{
+  padding: 0 10px;
+  a {
+    color: black;
+    margin-left: 10px;
+
+    &:hover{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
