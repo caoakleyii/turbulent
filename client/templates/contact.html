@@ -1,3 +1,26 @@
 <template name="contact">
+  <form action="mailer/mailer.php" method="post" id="contactForm" name="contactForm">
+    <fieldset>
 
+      <div> 
+        <input placeholder="Name" size="35" id="name" name="name">
+      </div>
+
+      <div>
+        <input placeholder="Email" size="35" id="email" name="email">
+      </div>
+
+      <div>
+        <input placeholder="Subject" size="35" id="subject" name="subjectof">
+      </div>
+
+      <div>
+        <textarea cols="5" rows="5" placeholder="Message" id="message" name="message">
+        </textarea>
+      </div>
+      <div>
+        <button class="submit" title="Send">SEND</button>
+      </div>
+    </fieldset>
+  </form>
 </template>
