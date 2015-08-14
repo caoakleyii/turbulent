@@ -1,6 +1,9 @@
 Template.side_bar.onRendered(function(){
   var routeName = Router.current().route.getName();
   $( '.' + routeName).addClass('selected');
+  $('.side-navbar').on('click', function() {
+    $('.mobile-drawer').slideToggle();
+  });
 });
 Template.side_bar.events({
   'click li.side-bar-item' : function(){
@@ -13,8 +16,5 @@ Template.side_bar.events({
   'click .logo' : function(){
     $('.side-bar-item').removeClass('selected');
     $('.logo').addClass('selected');
-  },
-  'click .side-navbar' : function() {
-    $('.mobile-drawer').slideToggle();
   }
 })
