@@ -1,7 +1,7 @@
 Template.side_bar.onRendered(function(){
   var routeName = Router.current().route.getName();
   $( '.' + routeName).addClass('selected');
-  $('.side-navbar').on('click', function() {
+  $('.menu-drawer').on('click', function() {
     $('.mobile-drawer').slideToggle();
   });
 });
@@ -17,4 +17,4 @@ Template.side_bar.events({
     $('.side-bar-item').removeClass('selected');
     $('.logo').addClass('selected');
   }
-})
+});
