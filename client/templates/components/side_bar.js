@@ -15,6 +15,8 @@ Template.side_bar.events({
     $('.logo').addClass('selected');
   },
   'click .menu-drawer' : function() {
+    alert('test');
+    $('.mobile-drawer').show();
     $('.mobile-drawer').slideToggle();
   }
 })
