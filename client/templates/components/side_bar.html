@@ -1,22 +1,40 @@
 <template name="side_bar">
 
   <nav class="side-navbar">
-    <span class="logo home side-bar-item">
-    <a href="/">  {{> logo }}</a>
+    <div class="menu-drawer hidden-md hidden-lg">
+      <i class="fa fa-bars menu-drawer-button"> </i>
+    </div>
+
+    <span class="mobile-drawer">
+      <span class="logo home side-bar-item">
+      <a href="/">  {{> logo }}</a>
+      </span>
+
+      <ul>
+        <li class="projects side-bar-item">
+          <a href="/projects"> <i class="fa fa-terminal hidden-xs hidden-sm"></i> Projects </a>
+        </li>
+        <li class="contact side-bar-item">
+          <a href="/contact"> <i class="fa fa-user hidden-xs hidden-sm"></i> Contact </a>
+        </li>
+        <li class="blog side-bar-item">
+          <a href="http://blog.chrisaoakley.com"><i class="fa fa-book hidden-xs hidden-sm"></i> Blog </a>
+        </li>
+        <li class="github side-bar-item">
+          <a href="https://github.com/caoakleyii"><i class="fa fa-github hidden-xs hidden-sm"></i> GitHub</a>
+        </li>
+      </ul>
+
+
+      <div>
+        <ul>
+          <li class="opened-app-tray open-app">
+      		  <img class="project-icon">
+          </li>
+        </ul>
+      </div>
+
     </span>
-
-    <ul>
-      <li class="projects side-bar-item">
-        <a href="/projects"> <i class="fa fa-terminal"></i> Projects </a>
-      </li>
-      <li class="contact side-bar-item">
-        <a href="/contact"> <i class="fa fa-user"></i> Contact </a>
-      </li>
-      <li class="github side-bar-item">
-        <a href="https://github.com/caoakleyii"><i class="fa fa-github"></i> GitHub</a>
-      </li>
-    </ul>
-
     <!-- Facebook -->
     <div class="social-media-profiles">
       <a href="https://www.facebook.com/caoakley" target="_blank">

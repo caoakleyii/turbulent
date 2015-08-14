@@ -7,9 +7,19 @@ nav.side-navbar {
       color: orange;
     }
   }
-
+  .open-app {
+    background-color: rgba(125,125,125,0.5);
+    border-left: 1px solid orange;
+  }
+  .project-icon {
+    height: 55px;
+    margin-left: 15px;
+    margin: 15px 15px;
+    display: none;
+  }
 
   @media (min-width: 992px){
+
     position: fixed;
     background-color: rgba(0,0,0, 0.85);
 
@@ -56,6 +66,10 @@ nav.side-navbar {
       font-size: 2rem;
     }
 
+    .mobile-drawer{
+      display: block !important;
+    }
+
     .social-media-profiles{
       width: 50%;
       position: fixed;
@@ -68,14 +82,26 @@ nav.side-navbar {
         width: 32px;
       }
     }
+
   }
 
   @media (max-width: 991px){
-    padding-top: 10px;
-    position: relative;
-    top:0;
+    z-index:1;
+    position: fixed;
     background-color: rgba(0,0,0, 0.8);
     width: 100%;
+    text-align:center;
+
+    .menu-drawer{
+      background-color: rgba(255, 165,0,0.9);
+      box-shadow: 5px 1px 7px black;
+    }
+
+    .menu-drawer-button{
+      font-size: 30px;
+      margin: 5px 0;
+    }
+
     a {
       color: orange;
       &:hover {
@@ -85,12 +111,10 @@ nav.side-navbar {
     ul
     {
       padding: 0;
-      display:inline;
       list-style-type: none;
       li{
-        margin-bottom: 15px;
-        display: inline-block;
-        padding-left: 10px;
+        margin-top: 15px;
+        padding-left: 0;
       }
     }
 
@@ -101,9 +125,12 @@ nav.side-navbar {
     }
 
     .logo {
-      display: inline;
       font-weight: 700;
-      padding: 0px 15px;
+      margin-top: 15px
+    }
+
+    .mobile-drawer{
+      display: none;
     }
 
     .social-media-profiles {

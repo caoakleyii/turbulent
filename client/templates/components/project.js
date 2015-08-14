@@ -1,6 +1,10 @@
 Template.project.onRendered(function() {
   $('.project').draggable();
 
+  $(window).resize(function(){
+    fixIframeHeight();
+  });
+
   // $('.about-this-project').popover({
   //   html : true
   // });
@@ -8,12 +12,36 @@ Template.project.onRendered(function() {
 
 Template.project.events({
   'click .app': function() {
-    $('.project-app').attr('src', this.appUrl);
-    $('.project-app-frame').show();
-
-    // $('.about-this-project').attr('data-content', this.description);
+    $(window).trigger('app-open', $(event.target).parent());
+    addContentToFrame(this);
+    addIconToTray(this);
+    showApplication(this);
+    fixIframeHeight();
+    return true;
   }
 });
+
+
+function addContentToFrame(app) {
+  $('.app-title').html(app.name + " - " +  app.appUrl);
+  // $('.about-this-project').attr('data-content', app.description);
+}
+
+function addIconToTray(app) {
+  $('.opened-app-tray').addClass('open-app');
+  $('nav .project-icon').attr('src', app.iconUrl);
+  $('nav .project-icon').show();
+}
+
+function showApplication(app){
+  $('.project-app').attr('src', app.appUrl);
+  $('.project-app-frame').fadeIn();
+}
+
+function fixIframeHeight(){
+  var height = $('.project-app-frame').css('height');
+  $('.project-app').css('height', height);
+}
 
 // because trigger:focus sucks for pop over
 $(window).on('click', function(e) {

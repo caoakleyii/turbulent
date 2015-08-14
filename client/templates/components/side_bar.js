@@ -4,7 +4,7 @@ Template.side_bar.onRendered(function(){
 });
 Template.side_bar.events({
   'click li.side-bar-item' : function(){
-    
+
     if ($(event.target).is('a')){
       $('.side-bar-item').removeClass('selected');
       $(event.target.parentElement).addClass('selected');
@@ -13,5 +13,8 @@ Template.side_bar.events({
   'click .logo' : function(){
     $('.side-bar-item').removeClass('selected');
     $('.logo').addClass('selected');
+  },
+  'click .menu-drawer' : function() {
+    $('.mobile-drawer').slideToggle();
   }
 })

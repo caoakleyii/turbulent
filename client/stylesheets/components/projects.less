@@ -9,18 +9,19 @@
 }
 
 .project-app-frame {
-  background-color: rgba(235,235,235,0.8);
+  background-color: rgba(255, 165, 0, 0.95);
   position: fixed;
+  border: 1px solid black;
   display: none;
   @media (min-width: 992px) {
     width: 90%;
-    min-height: 90%;
+    height: 90%;
     top: 7%;
     left: 7%;
   }
   @media (max-width: 991px){
-    min-height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
     top: 0;
     left: 0;
   }
@@ -28,17 +29,16 @@
 
 .project-app {
 
-  position: fixed;
   border: none;
   display: block;
 
   @media (min-width: 992px) {
-    min-height: 90%;
-    width: 90%;
+    height: 881px;
+    width: 100%;
   }
   @media (max-width: 991px){
-    height: 100%;
-    width: 100%
+    height: 881px;
+    width: 100%;
   }
 }
 .maximize-frame {
@@ -65,13 +65,39 @@
 {
   padding: 0 10px;
   a {
-    color: black;
     margin-left: 10px;
 
     &:hover{
-      color: white;
       text-decoration: none;
     }
+  }
+}
+.minimize {
+  color: #FFFF00;
+  border-radius: 7px;
+  box-shadow: 0px 1px 15px #FFFF00;
+  &:hover{
+    box-shadow: 0px 1px 15px white !important;
+    color: rgb(253, 253, 174) !important;
+  }
+}
+
+.maximize {
+  color: #6FFF00;
+  border-radius: 7px;
+  box-shadow: 0px 1px 15px rgba(111, 255, 0, 0.72);
+  &:hover {
+    box-shadow: 0px 1px 15px white !important;
+    color: #C4FF96 !important
+  }
+}
+.app-close {
+  color: #FE0001;
+  border-radius: 15px;
+  box-shadow: 0px 0px 26px rgba(255, 0, 0, 0.62);
+  &:hover {
+    box-shadow: 0px 1px 15px white !important;
+    color: #FF9B9B !important;
   }
 }
 .popover {
@@ -89,11 +115,18 @@
 }
 .about-this-project {
   font-weight: 800;
-  color: rgba(0,0,0,9);
+  color: white;
   font-style: italic;
 
   &:hover {
-    color: white;
+    color: #60A6E5;
     cursor: pointer;
   }
+}
+.app-title{
+  position: fixed;
+  width: 90%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 }

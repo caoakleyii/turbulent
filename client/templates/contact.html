@@ -1,8 +1,9 @@
 <template name="contact">
-  <form action="mailer/mailer.php" method="post" id="contactForm" name="contactForm">
-    <fieldset>
+  <div class="contact-background">
+    <form action="mailer/mailer.php" method="post" id="contactForm" class="contact-form" name="contactForm">
 
-      <div> 
+      <h1> Let's Talk </h1>
+      <div>
         <input placeholder="Name" size="35" id="name" name="name">
       </div>
 
@@ -21,6 +22,7 @@
       <div>
         <button class="submit" title="Send">SEND</button>
       </div>
-    </fieldset>
-  </form>
+
+    </form>
+  </div>
 </template>
