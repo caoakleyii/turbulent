@@ -14,9 +14,7 @@ Template.side_bar.events({
     $('.side-bar-item').removeClass('selected');
     $('.logo').addClass('selected');
   },
-  'click .menu-drawer' : function() {
-    alert('test');
-    $('.mobile-drawer').show();
+  'click .side-navbar' : function() {
     $('.mobile-drawer').slideToggle();
   }
 })
