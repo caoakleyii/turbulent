@@ -3,6 +3,7 @@
   height: 100%;
   z-index: -1;
   display: flex;
+  position: absolute;
   @media(max-width: 991px) {
     border: none !important;
   }
@@ -10,17 +11,24 @@
 
 .contact-form {
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
   background-color: rgba(25, 25, 25, 0.9);
+  display: flex;
 
   @media(min-width: 768px) {
     margin: auto;
+    min-height: 75%;
     width: 650px;
+    padding-bottom: 25px;
   }
   @media(max-width: 767px) {
     width: 100%;
+  }
 
+  fieldset {
+    align-self: center;
+    margin: auto;
+    border: none;
+    width: 100%;
   }
 
   h1 {
@@ -48,14 +56,24 @@
     border: none;
     padding: 12px;
     margin: 10px;
-    width: 80%;
+    @media(min-width: 768px) {
+      width:450px;
+    }
+    @media(max-width: 767px) {
+      width: 95%;
+    }
   }
   textarea {
     border: none;
     padding: 12px;
     margin: 10px;
     resize: none;
-    width: 80%;
+    @media(min-width: 768px) {
+      width:450px;
+    }
+    @media(max-width: 767px) {
+      width: 95%;
+    }
   }
 
   button {

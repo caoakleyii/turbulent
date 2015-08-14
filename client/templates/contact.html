@@ -1,28 +1,28 @@
 <template name="contact">
   <div class="contact-background">
     <form method="post" id="contactForm" class="contact-form" name="contactForm">
+      <fieldset>
+        <h1> Let's Talk </h1>
+        <div>
+          <input placeholder="Name" size="35" id="name" name="name">
+        </div>
 
-      <h1> Let's Talk </h1>
-      <div>
-        <input placeholder="Name" size="35" id="name" name="name">
-      </div>
+        <div>
+          <input placeholder="Email" size="35" id="email" name="email">
+        </div>
 
-      <div>
-        <input placeholder="Email" size="35" id="email" name="email">
-      </div>
+        <div>
+          <input placeholder="Subject" size="35" id="subject" name="subjectof">
+        </div>
 
-      <div>
-        <input placeholder="Subject" size="35" id="subject" name="subjectof">
-      </div>
+        <div>
+          <textarea rows="5" placeholder="Message" id="message" name="message"></textarea>
+        </div>
 
-      <div>
-        <textarea rows="5" placeholder="Message" id="message" name="message"></textarea>
-      </div>
-
-      <div>
-        <button class="submit" title="Send">SEND</button>
-      </div>
-
+        <div>
+          <button class="submit" title="Send">SEND</button>
+        </div>
+      </fieldset>
     </form>
   </div>
 </template>
