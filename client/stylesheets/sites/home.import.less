@@ -2,15 +2,15 @@ html {
   font-size: 62.5%
 }
 body {
-  background: #fff url("img/background.jpeg") no-repeat fixed center;
+  background: #fff url("img/background.jpeg") no-repeat center;
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
 }
 .word-color-fix {
-  position: fixed;
+  position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
-  top: 0;
   background-color:  #000;
   opacity: 0.50;
   z-index: -100;
@@ -18,5 +18,4 @@ body {
 
 .content {
   padding-top: 40px;
-  padding-bottom: 34px;
 }
