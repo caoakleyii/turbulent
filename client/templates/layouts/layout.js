@@ -2,7 +2,7 @@ Template.layout.onRendered(function() {
     $('.project-app-frame').draggable();
     $('.project-app-frame').dblclick(function(){
       maximizeFrame();
-    })
+    });
 
     $('nav .project-icon').on('click', function(){
       $('.project-app-frame').show();
@@ -22,7 +22,7 @@ Template.layout.events({
     $('.project-app-frame').fadeOut();
     $('.opened-app-tray').removeClass('open-app');
   }
-})
+});
 
 function maximizeFrame(){
   $('.project-app-frame').toggleClass('maximize-frame');
